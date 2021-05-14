@@ -15,6 +15,12 @@ classe.forEach(eleve =>{
 //     - ## Créez un un array qui contient 5 éléments
 //     - ## Affichez touts les éléments a l'aide d'une boucle foreach
 
+let tab = ["wa", "u", "hihi", "oki", "bruh"];
+
+tab.forEach(words =>{
+    console.log(words);
+});
+
 
 
 
@@ -22,13 +28,38 @@ classe.forEach(eleve =>{
 //     ## Triez le contenu du tableau donnees en verifiant le type de chaque donnée
 //     ## Creez 4 Tableaux : 'typeString' , 'typeNumber' , 'typeObject' , 'typeAutre.
 //     ## Videz le tableau "donnees" en redistribuant avec l'aide de condition et d'une function prédéfinie trouvée sur internet dans les bons tableaux.
+
 let donnees = [14, 7, 97, {}, "247", 67, 101, true, 34, 78, [], 'coding school', 0, 11, 32, "italie", 61, null, 'cent', 100];
+
+let typeString = [];
+let typeNumber = [];
+let typeObject = [];
+let typeAutre = [];
 
 
     //1. je console log le type de chacun de mes éléments
-
     //2. je trie mes éléments en fonction de leur type
-  
+
+    donnees.forEach(element => {
+        console.log(typeof element);
+
+        if(typeof element == "string"){
+            typeString.push(element);
+        }else if(typeof element == "number"){
+            typeNumber.push(element);
+        }else if(typeof element == "object"){
+            typeObject.push(element);
+        }else{
+            typeAutre.push(element);
+        }
+
+    });
+
+    
 //3. supprime tout ce qu'il y a dans le tableau
 
+donnees.splice(0, donnees.length);
+
 //4. j'affiche tout
+console.log(donnees);
+
